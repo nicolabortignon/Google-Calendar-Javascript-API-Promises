@@ -16,8 +16,9 @@ On page loaded you can initialize the wrapper in this way:
 
 ```js
 var calendarAPI = new calendarAPI(your_google_app_client_id);
-calendarAPI.startAuthentication().
-	then(calendarAPI.getCalendars());
+calendarAPI.startAuthentication()
+	.then( calendarAPI.getCalendars )
+	.then( calendarAPI.getEvents );
 ```
 
 where `your_google_app_client_id` is the token generated in your cloud console.
